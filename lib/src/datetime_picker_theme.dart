@@ -13,12 +13,12 @@ class DatePickerTheme extends Diagnosticable {
   final double itemHeight;
 
   const DatePickerTheme({
-    this.cancelStyle = const TextStyle(color: Colors.black54, fontSize: 16),
-    this.doneStyle = const TextStyle(color: Colors.blue, fontSize: 16),
-    this.itemStyle = const TextStyle(color: Color(0xFF000046), fontSize: 18),
+    this.cancelStyle = const TextStyle(color: Colors.black54, fontSize: 20),
+    this.doneStyle = const TextStyle(color: Colors.black, fontSize: 32),
+    this.itemStyle = const TextStyle(color: Color(0xFF000046), fontSize: 32),
     this.backgroundColor = Colors.white,
     this.headerColor,
-    this.containerHeight = 210.0,
+    this.containerHeight = 420.0,
     this.titleHeight = 44.0,
     this.itemHeight = 36.0,
   });
