@@ -25,7 +25,11 @@ enum LocaleType {
   bg,
   eu,
   cat,
-  th
+  th,
+  si,
+  no,
+  sq,
+  sv
 }
 
 final _i18nModel = {
@@ -106,6 +110,9 @@ final _i18nModel = {
     'done': 'تایید',
     'today': 'امروز',
     'monthShort': [
+      'دی',
+      'بهمن',
+      'اسفند',
       'فروردین',
       'اردیبهشت',
       'خرداد',
@@ -115,11 +122,11 @@ final _i18nModel = {
       'مهر',
       'آبان',
       'آذر',
-      'دی',
-      'بهمن',
-      'اسفند'
     ],
     'monthLong': [
+      'دی',
+      'بهمن',
+      'اسفند',
       'فروردین',
       'اردیبهشت',
       'خرداد',
@@ -129,9 +136,6 @@ final _i18nModel = {
       'مهر',
       'آبان',
       'آذر',
-      'دی',
-      'بهمن',
-      'اسفند'
     ],
     'day': ['دوشنبه', 'سه شنبه', 'چهارشنبه', 'پنج شنبه', 'جمعه', 'شنبه', 'یکشنبه'],
     'am': 'صبح',
@@ -949,6 +953,151 @@ final _i18nModel = {
     'am': 'AM',
     'pm': 'PM'
   },
+  'si': {
+    //Slovenian
+    'cancel': 'Prekliči',
+    'done': 'V redu',
+    'today': 'Danes',
+    'monthShort': [
+      'jan',
+      'feb',
+      'mar',
+      'apr',
+      'maj',
+      'jun',
+      'jul',
+      'avg',
+      'sep',
+      'okt',
+      'nov',
+      'dec'
+    ],
+    'monthLong': [
+      'januar',
+      'februar',
+      'marec',
+      'april',
+      'maj',
+      'junij',
+      'julij',
+      'avgust',
+      'september',
+      'oktober',
+      'november',
+      'december'
+    ],
+    'day': ['pon', 'tor', 'sre', 'čet', 'pet', 'sob', 'ned'],
+    'am': '',
+    'pm': ''
+  },
+  'no': {
+    'cancel': 'Avbryt',
+    'done': 'Ferdig',
+    'today': 'Idag',
+    'monthShort': [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'Mai',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Okt',
+      'Nov',
+      'Des'
+    ],
+    'monthLong': [
+      'Januar',
+      'Februar',
+      'Mars',
+      'April',
+      'Mai',
+      'Juni',
+      'Juli',
+      'August',
+      'September',
+      'Oktober',
+      'November',
+      'Desember'
+    ],
+    'day': ['Man', 'Tir', 'Ons', 'Tor', 'Fre', 'Lør', 'Søn'],
+    'am': '',
+    'pm': ''
+  },
+  'sq': {
+    'cancel': 'Anulo',
+    'done': 'Perfundo',
+    'today': 'Sot',
+    'monthShort': [
+      'Jan',
+      'Shk',
+      'Mar',
+      'Pri',
+      'Maj',
+      'Qer',
+      'Kor',
+      'Gus',
+      'Sht',
+      'Tet',
+      'Nen',
+      'Dhj'
+    ],
+    'monthLong': [
+      'Janar',
+      'Shkurt',
+      'Mars',
+      'Prill',
+      'Maj',
+      'Qershor',
+      'Korrik',
+      'Gusht',
+      'Shtator',
+      'Tetor',
+      'Nentor',
+      'Dhjetor'
+    ],
+    'day': ['Hen', 'Mar', 'Mer', 'Enj', 'Pre', 'Sht', 'Die'],
+    'am': 'PD',
+    'pm': 'MD'
+  },
+  'sv': {
+    'cancel': 'Avbryt',
+    'done': 'Klar',
+    'today': 'I dag',
+    'monthShort': [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'Maj',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Okt',
+      'Nov',
+      'Dec'
+    ],
+    'monthLong': [
+      'Januari',
+      'Februari',
+      'Mars',
+      'April',
+      'Maj',
+      'Juni',
+      'Juli',
+      'Augusti',
+      'September',
+      'Oktober',
+      'November',
+      'December'
+    ],
+    'day': ['Mån', 'Tis', 'Ons', 'Tor', 'Fre', 'Lör', 'Sön'],
+    'am': 'AM',
+    'pm': 'PM'
+  }
 };
 //get international object
 Map<String, dynamic> i18nObjInLocale(LocaleType type) {
@@ -1005,6 +1154,14 @@ Map<String, dynamic> i18nObjInLocale(LocaleType type) {
       return _i18nModel['cat'];
     case LocaleType.th:
       return _i18nModel['th'];
+    case LocaleType.si:
+      return _i18nModel['si'];
+    case LocaleType.no:
+      return _i18nModel['no'];
+    case LocaleType.sq:
+      return _i18nModel['sq'];
+    case LocaleType.sv:
+      return _i18nModel['sv'];
     default:
       return _i18nModel['en'];
   }
