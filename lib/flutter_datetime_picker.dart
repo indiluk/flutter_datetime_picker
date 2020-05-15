@@ -60,7 +60,7 @@ class DatePicker {
     DatePickerTheme theme,
     int hourOffset = 1,
     int minuteOffset = 1,
-    int secondOffset = 1,
+    int secondsOffset = 1,
   }) async {
     return await Navigator.push(
         context,
@@ -73,7 +73,7 @@ class DatePicker {
             theme: theme,
             barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
             pickerModel: TimePickerModel(
-                currentTime: currentTime, locale: locale, showSecondsColumn: showSecondsColumn, hourOffset: hourOffset, minuteOffset: minuteOffset, secondsOffset: secondOffset)));
+                currentTime: currentTime, locale: locale, showSecondsColumn: showSecondsColumn, hourOffset: hourOffset, minuteOffset: minuteOffset, secondsOffset: secondsOffset)));
   }
 
   ///
