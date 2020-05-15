@@ -58,6 +58,9 @@ class DatePicker {
     locale: LocaleType.en,
     DateTime currentTime,
     DatePickerTheme theme,
+    int hourOffset = 1,
+    int minuteOffset = 1,
+    int secondOffset = 1,
   }) async {
     return await Navigator.push(
         context,
@@ -70,7 +73,7 @@ class DatePicker {
             theme: theme,
             barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
             pickerModel: TimePickerModel(
-                currentTime: currentTime, locale: locale, showSecondsColumn: showSecondsColumn)));
+                currentTime: currentTime, locale: locale, showSecondsColumn: showSecondsColumn, hourOffset: hourOffset, minuteOffset: minuteOffset, secondsOffset: secondOffset)));
   }
 
   ///
@@ -85,6 +88,8 @@ class DatePicker {
     locale: LocaleType.en,
     DateTime currentTime,
     DatePickerTheme theme,
+    int hourOffset = 1,
+    int minuteOffset = 1,
   }) async {
     return await Navigator.push(
         context,
@@ -96,7 +101,7 @@ class DatePicker {
             locale: locale,
             theme: theme,
             barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
-            pickerModel: Time12hPickerModel(currentTime: currentTime, locale: locale)));
+            pickerModel: Time12hPickerModel(currentTime: currentTime, locale: locale, hourOffset: hourOffset, minuteOffset: minuteOffset)));
   }
 
   ///
@@ -113,6 +118,8 @@ class DatePicker {
     locale: LocaleType.en,
     DateTime currentTime,
     DatePickerTheme theme,
+    int hourOffset = 1,
+    int minuteOffset = 1,
   }) async {
     return await Navigator.push(
         context,
@@ -125,7 +132,7 @@ class DatePicker {
             theme: theme,
             barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
             pickerModel: DateTimePickerModel(
-                currentTime: currentTime, minTime: minTime, maxTime: maxTime, locale: locale)));
+                currentTime: currentTime, minTime: minTime, maxTime: maxTime, locale: locale, hourOffset: hourOffset, minuteOffset: minuteOffset)));
   }
 
   ///

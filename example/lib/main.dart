@@ -4,6 +4,9 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 void main() => runApp(new MyApp());
 
 class CustomPicker extends CommonPickerModel {
+
+  var steps = 15;
+
   String digits(int value, int length) {
     return '$value'.padLeft(length, "0");
   }
@@ -11,7 +14,7 @@ class CustomPicker extends CommonPickerModel {
   CustomPicker({DateTime currentTime, LocaleType locale}) : super(locale: locale) {
     this.currentTime = currentTime ?? DateTime.now();
     this.setLeftIndex(this.currentTime.hour);
-    this.setMiddleIndex(this.currentTime.minute);
+    this.setMiddleIndex((this.currentTime.minute / steps).floor());
     this.setRightIndex(this.currentTime.second);
   }
 
@@ -26,8 +29,17 @@ class CustomPicker extends CommonPickerModel {
 
   @override
   String middleStringAtIndex(int index) {
-    if (index >= 0 && index < 60) {
-      return this.digits(index, 2);
+    print(index);
+
+    var realIndex = index % steps;
+
+    // if(index < 3) {
+    //   return "DEMO";
+    // }
+    // return null;
+
+    if (realIndex >= 0 && realIndex < (60 / steps)) {
+      return this.digits((realIndex * steps).floor(), 2);
     } else {
       return null;
     }
